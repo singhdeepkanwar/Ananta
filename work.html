@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work - Ananta Group</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- Header -->
+<header id="main-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo"><strong>ANANTA</strong> GROUP</a>
+        
+        <!-- Desktop Navigation (Update the 'active' class on each page) -->
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="work.html" class="active">Our Work</a>
+       
+            <a href="contact.html" class="btn btn-primary" style="margin-left: 1rem;">Get In Touch</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+    
+    <!-- Mobile Navigation (This was missing from the new pages) -->
+    <div id="mobile-menu" class="hidden">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="work.html">Our Work</a>
+        <a href="contact.html">Contact</a>
+        <div class="p-4">
+             <a href="contact.html" class="btn btn-primary" style="width: 100%;">Get In Touch</a>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <!-- Page Header Section -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Impact in Action</h1>
+                <p>Explore how we've helped industry leaders achieve tangible results with bespoke AI.</p>
+            </div>
+        </section>
+
+        <!-- Case Studies Grid -->
+        <section id="case-studies" class="bg-white">
+            <div class="container">
+                <div class="case-study-grid">
+
+                    <!-- Case Study 1 -->
+                    <div class="case-study-card fade-in-section">
+                        <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=2400&auto=format&fit=crop" alt="Logistics and shipping">
+                        <div class="case-study-content">
+                            <span class="tag">Logistics & Supply Chain</span>
+                            <h4>Optimized Fleet Routing for Global Shipper</h4>
+                            <p><strong>Challenge:</strong> Inefficient routing led to high fuel costs and delivery delays.</p>
+                            <p><strong>Solution:</strong> Developed a predictive analytics engine to optimize routes in real-time based on traffic, weather, and load data.</p>
+                            <div class="results">
+                                <p><strong>Results:</strong></p>
+                                <ul>
+                                    <li>35% Increase in operational efficiency</li>
+                                    <li>$4.1M in annual fuel cost savings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="case-study-card fade-in-section">
+                        <img src="https://images.unsplash.com/photo-1600132806378-43d41ac1950e?q=80&w=2400&auto=format&fit=crop" alt="Financial technology">
+                        <div class="case-study-content">
+                            <span class="tag">Financial Services</span>
+                            <h4>Reduced Fraud for a Major FinTech Firm</h4>
+                             <p><strong>Challenge:</strong> Sophisticated fraudulent transactions were bypassing their rule-based detection systems.</p>
+                            <p><strong>Solution:</strong> Deployed an unsupervised machine learning model to detect anomalous transaction patterns.</p>
+                            <div class="results">
+                                <p><strong>Results:</strong></p>
+                                <ul>
+                                    <li>$1.2M in prevented fraudulent costs</li>
+                                    <li>60% reduction in manual review workload</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3 -->
+                    <div class="case-study-card fade-in-section">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2400&auto=format&fit=crop" alt="Healthcare technology">
+                        <div class="case-study-content">
+                            <span class="tag">Healthcare</span>
+                            <h4>Improved Diagnostic Accuracy in Medical Imaging</h4>
+                            <p><strong>Challenge:</strong> Improve the speed and accuracy of identifying critical markers in diagnostic scans.</p>
+                            <p><strong>Solution:</strong> Built a custom computer vision model to analyze scans and highlight areas of interest for radiologists.</p>
+                            <div class="results">
+                                <p><strong>Results:</strong></p>
+                                <ul>
+                                    <li>25% increase in diagnostic speed</li>
+                                    <li>18% reduction in false-negative rate</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+  <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col col-span-2">
+                    <h3 class="logo">Ananta</h3>
+                    <p>Your trusted partner in AI-driven digital transformation.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                 <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@ananta.group">hello@ananta.group</a></li>
+                        <li><p>Bengaluru, India</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ananta Group. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- Header Scroll Effect ---
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // --- Fade-in on Scroll Animation ---
+            const sections = document.querySelectorAll('.fade-in-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
