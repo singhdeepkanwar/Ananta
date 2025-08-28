@@ -9,6 +9,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Styles for Static Grid and Pagination -->
+    <style>
+        .case-study-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .case-study-card {
+            display: none; /* Hide cards by default */
+        }
+        
+        .case-study-card.visible {
+            display: flex; /* Show visible cards */
+            flex-direction: column;
+        }
+
+               /* Pagination Number Styles */
+        .pagination-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 3rem;
+        }
+        
+                .dot {
+            /* Basic styling */
+            border: 2px solid #ccc; /* A visible light grey border */
+            background-color: #fff; /* White background */
+            color: #555;            /* A clearly visible dark grey number */
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            
+            /* Sizing and Shape */
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+
+            /* Centering the number */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* Smooth transition */
+            transition: all 0.3s ease;
+        }
+        
+        .dot:hover {
+            border-color: #999;
+            color: #000;
+        }
+        
+        .dot.active {
+            /* Active state: Blue background, blue border, white number */
+            background-color: var(--primary-color); /* This is your site's blue */
+            border-color: #0052CC;
+            color: #0052CC; /* White number for high contrast */
+        }
+        
+    </style>
 </head>
 <body>
 
@@ -16,19 +78,14 @@
 <header id="main-header">
     <div class="container header-inner">
         <a href="index.html" class="logo"><strong>ANANTA</strong> GROUP</a>
-        
-        <!-- Desktop Navigation (Update the 'active' class on each page) -->
         <nav class="desktop-nav">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
             <a href="about.html">About Us</a>
             <a href="work.html" class="active">Our Work</a>
-       
             <a href="contact.html" class="btn btn-primary" style="margin-left: 1rem;">Get In Touch</a>
         </nav>
-
-        <!-- Mobile Menu Button -->
-       <button id="mobile-menu-button" aria-label="Open Menu">
+        <button id="mobile-menu-button" aria-label="Open Menu">
             <div class="hamburger-box">
                 <span class="line top"></span>
                 <span class="line middle"></span>
@@ -36,14 +93,11 @@
             </div>  
         </button> 
     </div>
-    
-    <!-- Mobile Navigation (This was missing from the new pages) -->
     <div id="mobile-menu" >
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="about.html">About Us</a>
         <a href="work.html">Our Work</a>
-    
         <div class="p-4">
              <a href="contact.html" class="btn btn-primary" style="width: 100%;">Get In Touch</a>
         </div>
@@ -51,7 +105,6 @@
 </header>
 
     <main>
-        <!-- Page Header Section -->
         <section class="page-header">
             <div class="container">
                 <h1>Impact in Action</h1>
@@ -59,66 +112,88 @@
             </div>
         </section>
 
-        <!-- Case Studies Grid -->
         <section id="case-studies" class="bg-white">
             <div class="container">
                 <div class="case-study-grid">
 
+                    <!-- All 6 Case Study Cards Remain in the HTML -->
                     <!-- Case Study 1 -->
-                    <div class="case-study-card fade-in-section">
-                        <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=2400&auto=format&fit=crop" alt="Logistics and shipping">
+                    <div class="case-study-card">
+                        <img src="Assets/credit.jpg" alt="Financial services technology interface">
                         <div class="case-study-content">
-                            <span class="tag">Logistics & Supply Chain</span>
-                            <h4>Optimized Fleet Routing for Global Shipper</h4>
-                            <p><strong>Challenge:</strong> Inefficient routing led to high fuel costs and delivery delays.</p>
-                            <p><strong>Solution:</strong> Developed a predictive analytics engine to optimize routes in real-time based on traffic, weather, and load data.</p>
-                            <div class="results">
-                                <p><strong>Results:</strong></p>
-                                <ul>
-                                    <li>35% Increase in operational efficiency</li>
-                                    <li>$4.1M in annual fuel cost savings</li>
-                                </ul>
-                            </div>
+                            <span class="tag">Financial Services & Automation</span>
+                            <h4>Automated Credit Scoring with an Agentic AI Framework</h4>
+                            <p><strong>Challenge:</strong> A major finance lender had a manual, slow, and inconsistent loan application and credit scoring process, leading to operational delays.</p>
+                            <p><strong>Solution:</strong> Developed a full end-to-end agentic framework for the credit scoring and loan application system using modular, configurable AI agents.</p>
+                            <div class="results"><p><strong>Results:</strong></p><ul><li>Drastically reduced loan processing time</li><li>Improved consistency of credit risk assessments</li></ul></div>
                         </div>
                     </div>
 
                     <!-- Case Study 2 -->
-                    <div class="case-study-card fade-in-section">
-                        <img src="https://images.unsplash.com/photo-1600132806378-43d41ac1950e?q=80&w=2400&auto=format&fit=crop" alt="Financial technology">
+                    <div class="case-study-card">
+                        <img src="Assets/labour.jpg" alt="Corporate compliance and legal books">
                         <div class="case-study-content">
-                            <span class="tag">Financial Services</span>
-                            <h4>Reduced Fraud for a Major FinTech Firm</h4>
-                             <p><strong>Challenge:</strong> Sophisticated fraudulent transactions were bypassing their rule-based detection systems.</p>
-                            <p><strong>Solution:</strong> Deployed an unsupervised machine learning model to detect anomalous transaction patterns.</p>
-                            <div class="results">
-                                <p><strong>Results:</strong></p>
-                                <ul>
-                                    <li>$1.2M in prevented fraudulent costs</li>
-                                    <li>60% reduction in manual review workload</li>
-                                </ul>
-                            </div>
+                            <span class="tag">Legal & Compliance Tech</span>
+                            <h4>AI Chatbot for Navigating Complex Labor Laws</h4>
+                            <p><strong>Challenge:</strong> An Industrial Relations department was overwhelmed with complex queries about Indian Central and State labor laws, creating a knowledge bottleneck.</p>
+                            <p><strong>Solution:</strong> Spearheaded the creation of an AI-powered chatbot using LangChain and Azure AI Search to provide fast, accurate answers to compliance questions.</p>
+                            <div class="results"><p><strong>Results:</strong></p><ul><li>Reduced time-to-answer for legal queries by over 90%</li><li>Ensured consistent and accurate compliance guidance</li></ul></div>
                         </div>
                     </div>
 
                     <!-- Case Study 3 -->
-                    <div class="case-study-card fade-in-section">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2400&auto=format&fit=crop" alt="Healthcare technology">
+                    <div class="case-study-card">
+                        <img src="Assets/preg.jpg" alt="Healthcare professional analyzing data on a screen">
                         <div class="case-study-content">
-                            <span class="tag">Healthcare</span>
-                            <h4>Improved Diagnostic Accuracy in Medical Imaging</h4>
-                            <p><strong>Challenge:</strong> Improve the speed and accuracy of identifying critical markers in diagnostic scans.</p>
-                            <p><strong>Solution:</strong> Built a custom computer vision model to analyze scans and highlight areas of interest for radiologists.</p>
-                            <div class="results">
-                                <p><strong>Results:</strong></p>
-                                <ul>
-                                    <li>25% increase in diagnostic speed</li>
-                                    <li>18% reduction in false-negative rate</li>
-                                </ul>
-                            </div>
+                            <span class="tag">Healthcare & Predictive Analytics</span>
+                            <h4>Predicting Adverse Outcomes in Pregnancies</h4>
+                            <p><strong>Challenge:</strong> A private hospital aimed to improve patient outcomes by proactively identifying at-risk pregnancies from historical clinical data.</p>
+                            <p><strong>Solution:</strong> Developed and deployed unique machine learning models to analyze clinical data and translate outputs into clinically actionable insights for medical staff.</p>
+                            <div class="results"><p><strong>Results:</strong></p><ul><li>Enabled early identification of high-risk patients</li><li>Provided clinicians with novel, data-driven insights</li></ul></div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 4 -->
+                    <div class="case-study-card">
+                        <img src="Assets/synthetic.jpg" alt="Scientist in a lab">
+                        <div class="case-study-content">
+                            <span class="tag">Pharma & R&D</span>
+                            <h4>Synthetic Patient Data Generation</h4>
+                            <p><strong>Challenge:</strong> A pharmaceutical company required large, privacy-compliant patient datasets for research but was limited by the availability of real-world data.</p>
+                            <p><strong>Solution:</strong> Directed the development of a GenAI tool that fine-tuned OpenAI GPT-4 and LLaMA models on custom datasets to generate high-quality synthetic patient data.</p>
+                            <div class="results"><p><strong>Results:</strong></p><ul><li>Accelerated research timelines significantly</li><li>Generated realistic data comparable to traditional models</li></ul></div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 5 -->
+                    <div class="case-study-card">
+                        <img src="Assets/call.jpg" alt="A busy call center">
+                        <div class="case-study-content">
+                            <span class="tag">Business Process Automation</span>
+                            <h4>GenAI-Powered Rules Engine for Call Centers</h4>
+                            <p><strong>Challenge:</strong> Call center agents at a digital imaging company struggled with complex booking and billing policies, causing bottlenecks and long call times.</p>
+                            <p><strong>Solution:</strong> Led the development of an automation system using AWS Bedrock Claude to convert English text policies into an executable rule engine, assisting agents in real-time.</p>
+                            <div class="results"><p><strong>Results:</strong></p><ul><li>Reduced process bottlenecks by over 50%</li><li>Lowered average call handling time</li></ul></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Case Study 6 -->
+                    <div class="case-study-card">
+                        <img src="Assets/fire.jpg" alt="A fire truck with a forest fire in the background">
+                        <div class="case-study-content">
+                            <span class="tag">Government & Public Safety</span>
+                            <h4>Fire Ignition Prediction & MLOps</h4>
+                            <p><strong>Challenge:</strong> A government department needed a reliable system to predict fire ignitions and manage the ML model lifecycle efficiently.</p>
+                            <p><strong>Solution:</strong> Trained a random forest model on a Databricks cluster using PySpark and established a full CI/CD MLOps workflow using Azure Pipelines for approvals and monitoring.</p>
+                            <div class="results"><p><strong>Results:</strong></p><ul><li>Improved resource allocation for fire prevention</li><li>Established a robust, automated MLOps pipeline</li></ul></div>
                         </div>
                     </div>
 
                 </div>
+
+                <!-- Pagination Controls -->
+                <div class="pagination-dots"></div>
+
             </div>
         </section>
 
@@ -127,32 +202,89 @@
   <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col col-span-2">
-                    <h3 class="logo">Ananta</h3>
-                    <p>Your trusted partner in AI-driven digital transformation.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                    </ul>
-                </div>
-                 <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:hello@ananta.group">hello@ananta.group</a></li>
-                        <li><p>Bengaluru, India</p></li>
-                    </ul>
-                </div>
+                <div class="footer-col col-span-2"><h3 class="logo">Ananta</h3><p>Your trusted partner in AI-driven digital transformation.</p></div>
+                <div class="footer-col"><h4>Explore</h4><ul><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="work.html">Our Work</a></li></ul></div>
+                 <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@ananta.group">hello@ananta.group</a></li><li><p>Bengaluru, India</p></li></ul></div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Ananta Group. All Rights Reserved.</p>
-            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Ananta Group. All Rights Reserved.</p></div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- JavaScript for Pagination Logic -->
+       <!-- JavaScript for Pagination Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.case-study-card');
+            const dotsContainer = document.querySelector('.pagination-dots');
+            
+            const getCardsPerPage = () => {
+                if (window.innerWidth <= 767) return 1;
+                if (window.innerWidth <= 1024) return 2;
+                return 3;
+            };
+
+            let cardsPerPage = getCardsPerPage();
+            let totalPages = Math.ceil(cards.length / cardsPerPage);
+            let currentPage = 1;
+
+            function setupPagination() {
+                cardsPerPage = getCardsPerPage();
+                totalPages = Math.ceil(cards.length / cardsPerPage);
+                dotsContainer.innerHTML = ''; 
+
+                for (let i = 1; i <= totalPages; i++) {
+                    const dot = document.createElement('button');
+                    dot.classList.add('dot');
+                    dot.setAttribute('data-page', i);
+                    
+                    // --- THIS IS THE NEW LINE ---
+                    dot.textContent = i; // Add the page number as text
+                    // -------------------------
+
+                    if (i === 1) {
+                        dot.classList.add('active');
+                    }
+                    dot.addEventListener('click', () => {
+                        currentPage = i;
+                        showPage(currentPage);
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            function showPage(page) {
+                const startIndex = (page - 1) * cardsPerPage;
+                const endIndex = startIndex + cardsPerPage;
+
+                cards.forEach(card => card.classList.remove('visible'));
+
+                for (let i = startIndex; i < endIndex && i < cards.length; i++) {
+                    cards[i].classList.add('visible');
+                }
+
+                document.querySelectorAll('.dot').forEach(d => {
+                    d.classList.remove('active');
+                    if (parseInt(d.getAttribute('data-page')) === page) {
+                        d.classList.add('active');
+                    }
+                });
+            }
+
+            // Initial setup
+            setupPagination();
+            showPage(1);
+
+            // Re-setup on window resize
+            window.addEventListener('resize', () => {
+                if (getCardsPerPage() !== cardsPerPage) {
+                    setupPagination();
+                    currentPage = Math.min(currentPage, totalPages);
+                    showPage(currentPage);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
