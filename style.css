@@ -16,8 +16,8 @@
 
 /* --- 1. Global & Base Styles --- */
 :root {
-    --primary-blue: #0052CC; 
-    --primary-blue-hover: #0052d9;
+    --primary-blue: #5A3DBD; 
+    --primary-blue-hover: #5A38CD;
     --heading-color: #172B4D;
     --text-color: #212529;
     --text-secondary-color: #5E6C84;
@@ -271,7 +271,7 @@ header.menu-open #mobile-menu .p-4 { animation-delay: 0.6s; } /* Animate button 
 .btn-primary:hover {
     background-color: var(--primary-blue-hover);
     transform: translateY(-2px);
-    box-shadow: 0 7px 14px rgba(0, 82, 204, 0.2);
+    box-shadow: 0 7px 14px rgba(109, 0, 204, 0.2);
     color: white; /* Ensure hover text is white */
 }
 
